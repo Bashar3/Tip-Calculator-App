@@ -75,7 +75,7 @@ pplNumInp.addEventListener("input", () => {
                     pplNumInp.style = "border-color: red; transform: translateX(2.5px)";
                 }, 100);
             } else {
-                pplNumInp.style = "border-color: var(--Strong-cyan); transform: none";
+                pplNumInp.style = "border-color: none; transform: none";
                 zeroSpan.style.display = "none";
             }
         }
