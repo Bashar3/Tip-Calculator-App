@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>spli<br />tter</h1>
+    <main>
+      <div class="col-1">
+        <div class="bills">
+          <div class="bills-title">
+            <h3>Bill</h3>
+          </div>
+          <div class="input-container">
+            <img src="images/icon-dollar.svg" alt="Dollar">
+            <input type="text" class="bills-inp" placeholder="0">
+          </div>
+        </div>
+        <div class="tips">
+          <h3>Select Tip %</h3>
+          <div class="tip-container">
+            <div class="tip">5%</div>
+            <div class="tip">10%</div>
+            <div class="tip">15%</div>
+            <div class="tip">25%</div>
+            <div class="tip">50%</div>
+            <input type="text" class="tip custom-inp" placeholder="Custom">
+          </div>
+        </div>
+
+        <div class="ppl-num">
+          <div class="ppl-num-title">
+            <h3>Number of People</h3>
+            <span class="zero-spn">Can't be Zero</span>
+          </div>
+          <div class="input-container">
+            <img src="images/icon-person.svg" alt="Person">
+            <input type="text" class="ppl-num-inp" maxlength="4" placeholder="0">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div>
+          <div class="row-1">
+            <div>
+              <h3>Tip Amount</h3>
+              <p>/ person</p>
+            </div>
+            <h2>$<span class="tip-span">0.00</span></h2>
+          </div>
+
+          <div class="row-2">
+            <div>
+              <h3>Total</h3>
+              <p>/ person</p>
+            </div>
+            <h2>$<span class="total-span">0.00</span></h2>
+          </div>
+        </div>
+
+        <button>Reset</button>
+      </div>
+    </main>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/Bashar3" target="_blank">Bashar</a>.
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Light-grayish-cyan);
+    font-family: 'Space Mono', monospace;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    opacity: 0.6;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    min-height: 450px;
+}
+
+input, button {
+    font-family: 'Space Mono', monospace;
+    outline: none;
+    border: none;
+}
+
+input {
+    border: 2px solid transparent;
+    transition: 100ms;
+    caret-color: var(--Strong-cyan);
+    background-color: var(--Very-light-grayish-cyan);
+    font-size: 1.25rem;
+}
+
+input:hover,
+input:focus {
+    border-color: var(--Strong-cyan);
+}
+
+input::placeholder {
+    font-size: 1.25rem;
+    opacity: 0.6;
+    color: black;
+}
+
+/* col-1, col-2 style */
+main .col-1,
+main .col-2 {
+    width: 400px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 15px;
+    direction: rtl;
+    border-radius: 8px;
+}
+
+.input-container img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*==================== Column 1 ====================*/
+main .col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+main .col-1 .bills>.bills-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .col-1 h3 {
+    opacity: 0.5;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+main .col-1 .tips .tip-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(40px, 200px));
+    gap: 10px;
+}
+
+main .col-1 .tips .tip-container .tip {
+    background-color: var(--Very-dark-cyan);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 250ms;
+    font-size: 1.5rem;
+}
+
+main .col-1 .tips .tip-container div.tip:hover,
+main .col-1 .tips .tip-container .tip.active {
+    background-color: #85dcd1;
+    color: black;
+}
+
+main .col-1 .tips .tip-container input.tip {
+    background-color: var(--Very-light-grayish-cyan);
+    color: black;
+    text-align: center;
+}
+
+main .col-1 .ppl-num .ppl-num-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.zero-spn {
+    display: none;
+    font-size: 0.8125rem;
+    color: #ff2c2c;
+}
+
+/*==================== Column 2 ====================*/
+main .col-2 {
+    background-color: var(--Very-dark-cyan);
+    color: white;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+main .col-2 .row-1,
+main .col-2 .row-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .col-2 .row-1 {
+    margin-bottom: 30px;
+}
+
+main .col-2 h2 {
+    color: var(--Strong-cyan);
+    font-size: 2.8125rem;
+}
+
+main .col-2 h3 {
+    font-size: 1rem;
+}
+
+main .col-2 p {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-left: 5px;
+}
+
+main .col-2 button {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 10px;
+    background: var(--Strong-cyan);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 250ms;
+    font-size: 1.5rem;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+main .col-2 button.valid {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+main .col-2 button:hover {
+    background-color: var(--Light-grayish-cyan);
+}
+
+/*==================== Attribution ====================*/
+.attribution {
+    font-size: 0.875rem;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    font-family: cursive;
+    letter-spacing: 1px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*==================== Responsive ====================*/
+@media (max-width: 991px) {
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        padding: 20px 20px 40px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main .col-1 {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    main .col-1 .tips h3,
+    main .col-1 .ppl-num h3 {
+        margin-top: 15px;
+    }
+
+    main .col-2 button {
+        display: block;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 550px) {
+    html {
+        font-size: 12px;
+    }
+
+    main {
+        padding: 15px;
+        width: auto;
+    }
+
+    main .col-1,
+    main .col-2 {
+        width: auto
+    }
+}
